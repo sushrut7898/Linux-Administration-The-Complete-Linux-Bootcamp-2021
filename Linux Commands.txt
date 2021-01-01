@@ -20,10 +20,123 @@ type rm        # => rm is /usr/bin/rm
 type cd        # => cd is a shell builtin
  
 # getting help for shell built-in commands
-help command    # => Ex: help cd
+help command    # => Ex: help cd / cd --help
 command --help  # => Ex: rm --help
  
 # searching for a command, feature or keyword in all man Pages
 man -k uname
 man -k "copy files"
 apropos passwd
+
+# USE Tab key to auto complete
+
+
+# ls => Displays list of directories
+# ls -l
+# ls -all
+# cat => Concatinates
+# ip add => Gives the IP Address
+# ping 8.8.8.8
+# ping -c 1 8.8.8.8 => Ping the IP Address
+
+
+##########################
+## Keyboard Shortcuts
+##########################
+ 
+TAB  # autocompletes the command or the filename if its unique
+TAB TAB (press twice)   # displays all commands or filenames that start with those letters
+ 
+ 
+# clearing the current line
+CTRL + L                // clear command
+ 
+# closing the shell (exit)
+CTRL + D                // exit command
+ 
+# cutting (removing) the current line 
+CTRL + U
+ 
+# moving the cursor to start of the line
+CTRL + A
+ 
+# moving the cursor to the end of the line
+Ctrl + E
+ 
+# stopping the current command
+CTRL + C
+ 
+# sleeping a the running program
+CTRL + Z
+
+
+
+##########################
+## Bash History
+##########################
+ 
+# showing the history
+history
+ 
+# removing a line (ex: 100) from the history
+history -d 100
+ 
+# removing the entire history
+history -c
+ 
+# printing the no. of commands saved in the history file (~/.bash_history)
+echo $HISTFILESIZE
+ 
+# printing the no. of history commands saved in the memory
+echo $HISTSIZE
+ 
+# rerunning the last command from the history
+!!
+ 
+# running  a specific command from the history (ex: the 20th command)
+!20
+ 
+# running the last nth (10th) command from the history
+!-10
+ 
+# running the last command starting with abc 
+!abc
+ 
+# printing the last command starting with abc 
+!abc:p
+ 
+# reverse searching into the history
+CTRL + R
+ 
+# recording the date and time of each command in the history
+HISTTIMEFORMAT="%d/%m/%y %T "
+
+# Comment should not be saved in history
+ who        => leave space before typing the command
+
+HISTCONTROL=ignorespace     # set if listed in history even after leaving space
+HISTCONTROL=ignoreboth      # dosent save spaxed command as well as duplicate command
+
+# To make changes forever add to bashrc
+echo "HISTTIMEFORMAT="%d/%m/%y %T"" >> .bashrc
+
+##########################
+## Running commands as root (sudo, su)
+##########################
+ 
+# running a command as root (only users that belong to sudo group [Ubuntu] or wheel [CentOS])
+sudo command
+ 
+# becoming root temporarily in the terminal
+sudo su      # => enter the user's password
+ 
+# setting the root password
+sudo passwd root
+ 
+# changing a user's password
+passwd username
+ 
+# becoming root temporarily in the terminal
+su     # => enter the root password
+
+
