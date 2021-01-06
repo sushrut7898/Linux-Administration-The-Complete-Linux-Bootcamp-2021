@@ -1,0 +1,21 @@
+.log    => log file
+.conf   => configurationfile
+Extension in linux dosent matter.
+
+Getting file details => file ~/addreaa/file.jpeg
+
+Entensions are useful only for graphical applications.
+
+b       => Block device
+-       => File
+d       => Directory
+l       => Symbolic Link
+c       => Char device
+s       => socket type, processes to communicate, noting to do with tcp ip socket.
+p       => named pipe, provides easy way for processes to communicate
+ls -F   => Adds symbol
+/ directory
+@ Symbolic Link
+= socket
+| pipe
+* executable files
